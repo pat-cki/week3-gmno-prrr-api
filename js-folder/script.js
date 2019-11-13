@@ -68,4 +68,22 @@ for (let i=0;i<childrenFriendliness.length;i++){
 //     xhr.send();
 //   })();
   
-  
+  //First giphy 
+    // (function () {
+      //   let xhr = new XMLHttpRequest();
+      //   let breed = 'british-blue';
+      //   let britishBlue = `https://api.giphy.com/v1/gifs/search?api_key=AKBayfz9FpPmrLSc5ScLLJx9BOzj2gaF&q=${breed}&limit=2`;
+      //   xhr.onreadystatechange = function() {
+      //       if (xhr.readyState == 4 && xhr.status == 200) {
+      //         let giphyObj = JSON.parse(xhr.responseText);
+      //         console.log(giphyObj);
+      //         let gifDrop = document.querySelector(".gif");
+      //         console.log(gifDrop);
+      //         let link = giphyObj.data[1].images.downsized_medium.url;
+      //         gifDrop.src = link;
+      //         console.log(link);
+      //       }
+      //   };
+      //   xhr.open("GET", britishBlue, true);
+      //   xhr.send();
+      // })();
