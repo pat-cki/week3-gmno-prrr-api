@@ -1,0 +1,24 @@
+{
+  "name": "week3-gmno-prrr-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "tap-spec": "^5.0.0",
+    "tape": "^4.11.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fac18/week3-gmno-prrr-api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fac18/week3-gmno-prrr-api/issues"
+  },
+  "homepage": "https://github.com/fac18/week3-gmno-prrr-api#readme"
+}
