@@ -7,3 +7,79 @@
     --colour-five: #5e1e97;
     --colur-six: #17a3ae;
 }
+
+body {
+    background-color: var(--colour-one);
+    font-family: Kalam;
+}
+
+header {
+    text-align: center;
+}
+
+h1,
+h2,
+.header__paragraph {
+    font-family: 'Neucha', cursive;
+    color: var(--colour-two);
+}
+
+h1 {
+    font-size: 6em;
+}
+
+h2 {
+    font-size: 3em;
+}
+
+.header__paragraph {
+    font-size: 2em;
+}
+
+.container {
+    display: flex;
+}
+
+form {
+    min-width: 40%;
+    border: 4px solid #5e1e97;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* align-content: center; */
+    margin: 1em;
+}
+
+.result {
+    min-width: 40%;
+    border: 4px solid #5e1e97;
+    display: flex;
+    margin: 1em;
+
+}
+
+fieldset {
+    border: 0px;
+    /* margin: 0.8em; */
+}
+
+input.button {
+    background-color: #5e1e97;
+    color: #fcdc25;
+    margin-top: 1em;
+    font-size: 1em;
+    padding: 0.3em 2em;
+    border: 0px;
+}
+
+.result__paragraph {
+    padding: 1.3em;
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        flex-direction: column;
+    }
+
+}
