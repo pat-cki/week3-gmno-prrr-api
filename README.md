@@ -1,10 +1,10 @@
 # week3-gmno-prrr-api
 
-## Team
-* Renata
-* Rosalie
-* Reggie
-* Pat 
+## Team - P(u)RRR
+* [Renata](https://github.com/renatajarmova)
+* [Rosalie](https://github.com/rosalie-baxter)
+* [Reggie](https://github.com/ReginaldJbeili)
+* [Pat](https://github.com/pat-cki)
 
 ## User Journey
 
