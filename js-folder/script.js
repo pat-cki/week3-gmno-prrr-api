@@ -113,10 +113,7 @@ let xhr = new XMLHttpRequest();
       xhr.send();
 
   };
-  xhr.open("GET", url, true);
-  xhr.send();
-};
-
+  
 //UI VARIABLES
 const inputName = document.getElementById('name').value;
 
