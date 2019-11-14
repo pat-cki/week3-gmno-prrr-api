@@ -2,14 +2,16 @@
   "name": "week3-gmno-prrr-api",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "js-folder/script.js",
   "dependencies": {
     "tap-spec": "^5.0.0",
     "tape": "^4.11.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "nodemon": "^1.19.4"
+  },
   "scripts": {
-    "test": ""
+    "test": "nodemon js-folder/script-test.js | tap-spec"
   },
   "repository": {
     "type": "git",

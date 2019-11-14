@@ -65,7 +65,7 @@ function chooseCatOptions () {
   
 //First giphy 
 let getGiphy = function(name) {
-  let xhr = new XMLHttpRequest();
+let xhr = new XMLHttpRequest();
     // let breedName = allCats[0];
     // let breed = 'british-blue';
       let url = `https://api.giphy.com/v1/gifs/search?api_key=AKBayfz9FpPmrLSc5ScLLJx9BOzj2gaF&q=${name}&limit=2`;
@@ -85,3 +85,7 @@ let getGiphy = function(name) {
   };
 
 // getGiphy(allCats[0]);
+
+module.exports = {
+  getGiphy
+}
