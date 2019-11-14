@@ -34,39 +34,40 @@
                 <fieldset>
                     <legend>Are you stranger friendly?</legend>
                     <input id="nah" type="radio" name="stranger-friendly" value="3">
-                     <label for="nah">nah!</label>
-                     <input id="kinda" type="radio" name="stranger-friendly" value="4" checked>
-                     <label for="kinda">kinda...</label> 
-                     <input id="yeah" type="radio" name="stranger-friendly" value="5">
-                     <label for="yeah">yeah!</label>  
-                 </fieldset>            
-                 <fieldset>
-                <legend>How's your energy?</legend>
+                    <label for="nah">nah!</label>
+                    <input id="kinda" type="radio" name="stranger-friendly" value="4" checked>
+                    <label for="kinda">kinda...</label>
+                    <input id="yeah" type="radio" name="stranger-friendly" value="5">
+                    <label for="yeah">yeah!</label>
+                </fieldset>
+                <fieldset>
+                    <legend>How's your energy?</legend>
                     <input id="nah" type="radio" name="energy" value="3">
                     <label for="nah">nah!</label>
                     <input id="kinda" type="radio" name="energy" value="4" checked>
-                    <label for="kinda">kinda...</label> 
-                    <input id="yeah" type="radio" name="energy" value="5" >
-                    <label for="yeah">yeah!</label> 
-             </fieldset>
-             <fieldset>
-                <legend>Do you get on with children?</legend>
+                    <label for="kinda">kinda...</label>
+                    <input id="yeah" type="radio" name="energy" value="5">
+                    <label for="yeah">yeah!</label>
+                </fieldset>
+                <fieldset>
+                    <legend>Do you get on with children?</legend>
                     <input id="nah" type="radio" name="children" value="3">
                     <label for="nah">nah!</label>
                     <input id="kinda" type="radio" name="children" value="4" checked>
-                    <label for="kinda">kinda...</label> 
-                    <input id="yeah" type="radio" name="children" value="5" >
-                    <label for="yeah">yeah!</label> 
-            </fieldset>
-            <input class="button" value="Find out your answer!" type="submit" onclick="chooseCatOptions()"></input>
-         </form>
-         <section class="result">
-            <h3></h3>
-            <img class="question__mark" aria-label="Question mark image" src="img/Lol_question_mark.png"
-                alt="Question mark image">
-        </section>
-        </main>
-        <script src="js-folder/script.js" async defer></script>
-    </body>
-</html>
+                    <label for="kinda">kinda...</label>
+                    <input id="yeah" type="radio" name="children" value="5">
+                    <label for="yeah">yeah!</label>
+                </fieldset>
+                <input class="button" value="Find out your answer!" type="submit" onclick="chooseCatOptions()"></input>
+            </form>
+            <section class="result">
+                <h2 id="human_name"></h2>
+                <img class="question__mark" aria-label="Question mark image" src="img/Lol_question_mark.png"
+                    alt="Question mark image">
+                <h4 id="cat_description"></h4>
+            </section>
+    </main>
+    <script src="js-folder/script.js" async defer></script>
+</body>
 
+</html>
