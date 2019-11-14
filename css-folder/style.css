@@ -12,7 +12,7 @@ body {
     background-color: var(--colour-five);
     font-family: Kalam;
     color: #fff;
-    background-image: url("/img/cats.svg");
+    background-image: url("../img/cats.svg");
     min-height: 40em;
 }
 
