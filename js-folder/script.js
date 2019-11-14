@@ -34,52 +34,28 @@ function chooseCatOptions () {
   xhr.onreadystatechange = function() {
       if (xhr.readyState == 4 && xhr.status == 200) {
         let catObj = JSON.parse(xhr.responseText);
+        console.log(catObj);
         let allCats=[]
         console.log("this is", catObj[0])
           console.log("this is", stranNum)
-        for (let i = 0; i < catObj.length; i++) {
-          if (catObj[i].stranger_friendly==stranNum&&catObj[i].energy_level==energyNum&&catObj[i].child_friendly==childrenNum) {
-            allCats.push(catObj[i].name)
-          }
-        }
-        console.log("this is", allCats)
-        }
+        
+            for (let i = 0; i < catObj.length; i++) {
+    
+               if(catObj[i].stranger_friendly==stranNum&&
+                catObj[i].energy_level==energyNum&&
+                catObj[i].child_friendly==childrenNum) {
+                allCats.push(catObj[i].name)}
+                 
+                }
+
+            if (allCats.length==0) {
+              allCats.push("Stray Cat")
+            }
+            let randomCat = allCats[Math.floor(Math.random()*allCats.length)]
+            console.log("this is", randomCat)
       }
-  
+    }
   xhr.open("GET", url, true);
   xhr.send();
-      }
-//   (function () {
-//     let xhr = new XMLHttpRequest();
-//     let url = "http://api.giphy.com/v1/gifs/search?q=funny+cat&api_key=dc6zaTOxFJmzC";
-//     xhr.onreadystatechange = function() {
-//         if (xhr.readyState == 4 && xhr.status == 200) {
-//           let giphyObj = JSON.parse(xhr.responseText);
-//           let gifDrop = document.querySelector(".gif");
-//           let link = giphyObj.data[1].images.downsized_medium.url;
-//           gifDrop.src = link;
-//         }
-//     };
-//     xhr.open("GET", url, true);
-//     xhr.send();
-//   })();
-  
-  //First giphy 
-    // (function () {
-      //   let xhr = new XMLHttpRequest();
-      //   let breed = 'british-blue';
-      //   let britishBlue = `https://api.giphy.com/v1/gifs/search?api_key=AKBayfz9FpPmrLSc5ScLLJx9BOzj2gaF&q=${breed}&limit=2`;
-      //   xhr.onreadystatechange = function() {
-      //       if (xhr.readyState == 4 && xhr.status == 200) {
-      //         let giphyObj = JSON.parse(xhr.responseText);
-      //         console.log(giphyObj);
-      //         let gifDrop = document.querySelector(".gif");
-      //         console.log(gifDrop);
-      //         let link = giphyObj.data[1].images.downsized_medium.url;
-      //         gifDrop.src = link;
-      //         console.log(link);
-      //       }
-      //   };
-      //   xhr.open("GET", britishBlue, true);
-      //   xhr.send();
-      // })();
+
+}
