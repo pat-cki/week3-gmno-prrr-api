@@ -34,21 +34,34 @@ function chooseCatOptions () {
   xhr.onreadystatechange = function() {
       if (xhr.readyState == 4 && xhr.status == 200) {
         let catObj = JSON.parse(xhr.responseText);
+        console.log(catObj);
         let allCats=[]
-        // console.log("this is", catObj[0])
-        //   console.log("this is", stranNum)
-        for (let i = 0; i < catObj.length; i++) {
-          if (catObj[i].stranger_friendly==stranNum&&catObj[i].energy_level==energyNum&&catObj[i].child_friendly==childrenNum) {
-            allCats.push(catObj[i].name)
-          }
-        }
-        getGiphy(allCats[0]);
-        console.log("this is", allCats)
-        }
+        console.log("this is", catObj[0])
+          console.log("this is", stranNum)
+        
+            for (let i = 0; i < catObj.length; i++) {
+    
+               if(catObj[i].stranger_friendly==stranNum&&
+                catObj[i].energy_level==energyNum&&
+                catObj[i].child_friendly==childrenNum) {
+                allCats.push(catObj[i].name)}
+                 
+                }
+
+            if (allCats.length==0) {
+              allCats.push("Stray Cat")
+            }
+            
+            let randomCat = allCats[Math.floor(Math.random()*allCats.length)]
+            getGiphy(randomCat)
+            console.log("this is", randomCat)
       }
-    xhr.open("GET", url, true);
-    xhr.send();
-  }
+    }
+  xhr.open("GET", url, true);
+  xhr.send();
+
+}
+
   
 //First giphy 
 let getGiphy = function(name) {
