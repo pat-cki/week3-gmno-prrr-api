@@ -54,16 +54,22 @@ form {
 }
 
 .result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     min-width: 40%;
     border: 4px solid var(--colour-two);
     display: flex;
     margin: 1em;
+    padding: 1.3em;
+}
 
+.question__mark {
+    width: 50%;
 }
 
 fieldset {
     border: 0px;
-    /* margin: 0.8em; */
 }
 
 input.button {
@@ -74,10 +80,6 @@ input.button {
     padding: 0.3em 1.2em;
     border: 0px;
     border-radius: 10px;
-}
-
-.result__paragraph {
-    padding: 1.3em;
 }
 
 @media screen and (max-width: 600px) {
