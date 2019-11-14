@@ -97,7 +97,7 @@ let getGiphy = function(name) {
 let xhr = new XMLHttpRequest();
     // let breedName = allCats[0];
     // let breed = 'british-blue';
-      let url = `https://api.giphy.com/v1/gifs/search?api_key=AKBayfz9FpPmrLSc5ScLLJx9BOzj2gaF&q=${name}&limit=2`;
+      let url = `https://api.giphy.com/v1/gifs/search?api_key=AKBayfz9FpPmrLSc5ScLLJx9BOzj2gaF&q=${name}+cat&limit=2`;
       xhr.onreadystatechange = function() {
           if (xhr.readyState == 4 && xhr.status == 200) {
             let giphyObj = JSON.parse(xhr.responseText);
@@ -116,10 +116,4 @@ let xhr = new XMLHttpRequest();
   
 //UI VARIABLES
 const inputName = document.getElementById('name').value;
-
-// getGiphy(allCats[0]);
-
-module.exports = {
-  getGiphy
-}
 
