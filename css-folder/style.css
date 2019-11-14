@@ -12,6 +12,8 @@ body {
     background-color: var(--colour-five);
     font-family: Kalam;
     color: #fff;
+    background-image: url("/img/cats.svg");
+    min-height: 40em;
 }
 
 header {
@@ -51,6 +53,9 @@ form {
     flex-direction: column;
     /* align-content: center; */
     margin: 1em;
+    background-color: var(--colour-five);
+    padding: 1em 1em 3em 1em;
+    border-radius: 0.6em;
 }
 
 .result {
@@ -62,14 +67,22 @@ form {
     display: flex;
     margin: 1em;
     padding: 1.3em;
+    background-color: var(--colour-five);
+    border-radius: 0.6em;
 }
 
 .question__mark {
     width: 50%;
+    margin-top: 2em;
 }
 
 fieldset {
     border: 0px;
+}
+
+input.input-field {
+    padding: 0.7em;
+    ;
 }
 
 input.button {
@@ -77,9 +90,9 @@ input.button {
     color: black;
     margin-top: 1em;
     font-size: 1em;
-    padding: 0.3em 1.2em;
+    padding: 0.5em 1.7em;
     border: 0px;
-    border-radius: 10px;
+    /* border-radius: 10px; */
 }
 
 @media screen and (max-width: 600px) {
