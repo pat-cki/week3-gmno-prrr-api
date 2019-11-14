@@ -92,21 +92,26 @@ function chooseCatOptions() {
 
 
 //First giphy 
-let getGiphy = function (name) {
-  let xhr = new XMLHttpRequest();
-  // let breedName = allCats[0];
-  // let breed = 'british-blue';
-  let url = `https://api.giphy.com/v1/gifs/search?api_key=AKBayfz9FpPmrLSc5ScLLJx9BOzj2gaF&q=${name}+cat&limit=2`;
-  xhr.onreadystatechange = function () {
-    if (xhr.readyState == 4 && xhr.status == 200) {
-      let giphyObj = JSON.parse(xhr.responseText);
-      console.log(giphyObj);
-      let gifDrop = document.querySelector(".question__mark");
-      console.log(gifDrop);
-      let link = giphyObj.data[0].images.downsized_medium.url;
-      gifDrop.src = link;
-      console.log(link);
-    }
+
+let getGiphy = function(name) {
+let xhr = new XMLHttpRequest();
+    // let breedName = allCats[0];
+    // let breed = 'british-blue';
+      let url = `https://api.giphy.com/v1/gifs/search?api_key=AKBayfz9FpPmrLSc5ScLLJx9BOzj2gaF&q=${name}&limit=2`;
+      xhr.onreadystatechange = function() {
+          if (xhr.readyState == 4 && xhr.status == 200) {
+            let giphyObj = JSON.parse(xhr.responseText);
+            console.log(giphyObj);
+            let gifDrop = document.querySelector(".question__mark");
+            console.log(gifDrop);
+            let link = giphyObj.data[0].images.downsized_medium.url;
+            gifDrop.src = link;
+            console.log(link);
+          }
+      };
+      xhr.open("GET", url, true);
+      xhr.send();
+
   };
   xhr.open("GET", url, true);
   xhr.send();
@@ -115,7 +120,9 @@ let getGiphy = function (name) {
 //UI VARIABLES
 const inputName = document.getElementById('name').value;
 
-// function updateDom() {
-// //   console.log(inputName);
-// // }
-// // // getGiphy(allCats[0]);
+// getGiphy(allCats[0]);
+
+module.exports = {
+  getGiphy
+}
+
