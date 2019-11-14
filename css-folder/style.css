@@ -1,19 +1,20 @@
 :root {
     /* COLOURS */
     --colour-one: #d639e9;
-    --colour-two: #fcdc25;
+    --colour-two: #ffc000;
     --colour-three: #ef43a4;
     --colour-four: #38bbea;
     --colour-five: #5e1e97;
-    --colur-six: #17a3ae;
+    --colour-six: #17a3ae;
+    --colour-seven: #2e0f49;
 }
 
 body {
     background-color: var(--colour-five);
-    font-family: Kalam;
+    font-family: Kalam, cursive;
     color: #fff;
     background-image: url("../img/cats.svg");
-    min-height: 40em;
+    min-height: 50em;
 }
 
 header {
@@ -42,6 +43,7 @@ h2 {
 
 .container {
     display: flex;
+    flex-direction: column;
 }
 
 form {
@@ -56,6 +58,7 @@ form {
     background-color: var(--colour-five);
     padding: 1em 1em 3em 1em;
     border-radius: 0.6em;
+    box-shadow: 20px 20px 0px 0px var(--colour-seven);
 }
 
 .result {
@@ -70,6 +73,7 @@ form {
     padding: 1.3em;
     background-color: var(--colour-five);
     border-radius: 0.6em;
+    box-shadow: 20px 20px 0px 0px var(--colour-seven);
 }
 
 .question__mark {
@@ -77,38 +81,60 @@ form {
     margin-top: 2em;
 }
 
+legend.name_label {
+    text-align: center;
+}
+
 fieldset {
     border: 0px;
+    margin-top: 0.8em;
 }
 
 input.input-field {
     padding: 0.7em;
+    min-width: 19em;
 }
 
 input.button {
-    background-color: var(--colour-four);
-    color: black;
-    margin-top: 1em;
-    font-size: 1em;
-    padding: 0.5em 1.7em;
+    background-color: var(--colour-two);
+    color: var(--colour-five);
+    margin: 3em 0 3em 0;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    padding: 1em 2.3em;
     border: 0px;
-    /* border-radius: 10px; */
+    border-radius: 0.3em;
+    box-shadow: 0px 7px 0px 0px var(--colour-seven);
 }
 
-@media screen and (max-width: 600px) {
+input.button:active {
+    box-shadow: 0px 2px 0px 0px var(--colour-seven);
+}
+
+#cat_description {
+    padding: 2em;
+    font-size: 1.2em;
+}
+
+@media screen and (min-width: 600px) {
     .container {
-        flex-direction: column;
+        flex-direction: row;
     }
+
     h1 {
-        font-size: 3.5em;
+        font-size: 5.5em;
     }
+
     h2 {
-        font-size: 1.6em;
+        font-size: 2.6em;
     }
+
     .header__paragraph {
-        font-size: 1.2em;
+        font-size: 2em;
     }
+
     .question__mark {
-        width: 80%;
+        width: 60%;
+        margin-top: 5em;
     }
 }
