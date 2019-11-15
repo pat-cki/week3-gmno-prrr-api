@@ -34,10 +34,9 @@
 
 ---
 
+
 ![](https://i.imgur.com/vL5tnB0.jpg)
 
-
----
 
 ![](https://i.imgur.com/e5dsmeM.jpg)
 
@@ -127,5 +126,9 @@ We're getting better at doing this from day one with Semantic HTML:
 - Error handling is very necessary!
 - Pat is a stray cat
 
+---
+
+### Stop Go Continue
 
 
+![](https://user-images.githubusercontent.com/51528685/68974912-c7dac880-07e9-11ea-8e25-16dacf0d8a49.jpg)
