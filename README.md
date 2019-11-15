@@ -119,12 +119,6 @@ We're getting better at doing this from day one with Semantic HTML:
 
 ---
 
-### Stretch goals
-
-- better
-
----
-
 ### What we learnt!
 
 - APIs are fun! And you can do a lot with them
