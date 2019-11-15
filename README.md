@@ -103,11 +103,25 @@ We're getting better at doing this from day one with Semantic HTML:
 
 ---
 
-### Struggles
+### Stretch goals 
+
+- styling radio buttons (paws for form input)
+- defining a better condition to filter the results from the first API
+
+
+--- 
+
+### Struggles 
 
 - We spent a LOT Of time trying to separate the different eventualities of quiz results in a neat way - whether chaining through for loops or using case statements - the result here is a simplified version of what we were originally trying to do!
 - We had a few issues with accessing variables in different parts of the code which meant that we ended up putting a lot of it in one massive function... 
 - Like every group we had a couple stumbling blocks with our API requests (we thought the code was broken but it turned out our WiFi was down)
+
+---
+
+### Stretch goals
+
+- better
 
 ---
 
