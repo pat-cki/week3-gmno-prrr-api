@@ -50,7 +50,7 @@ function chooseCatOptions() {
       if (allCats.length == 0) {
         allCats.push("Stray Cat");
         catDescri.push("The stray cat is the most precious of all the cats! You may not have a home but that's because the world is your home. You are one of a kind!");
-        catDesc.innerText = catDescri[0];
+        catDesc.textContent = catDescri[0];
       }
 
       let randomCat = allCats[Math.floor(Math.random() * allCats.length)]
