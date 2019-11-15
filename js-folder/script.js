@@ -25,9 +25,6 @@ function chooseCatOptions() {
   let stranNum = Number(stranChecked)
   let energyNum = Number(energyChecked)
   let childrenNum = Number(childrenChecked)
-  // console.log (stranNum);
-  // console.log (energyNum);
-  // console.log (childrenNum);
 
   let xhr = new XMLHttpRequest();
   let url = "https://api.thecatapi.com/v1/breeds/";
@@ -40,25 +37,20 @@ function chooseCatOptions() {
       console.log("this is", stranNum)
 
       for (let i = 0; i < catObj.length; i++) {
-
         if (catObj[i].stranger_friendly == stranNum &&
           catObj[i].energy_level == energyNum &&
           catObj[i].child_friendly == childrenNum) {
           allCats.push(catObj[i].name)
         }
-
       }
+
       let catDescri = []
       let catDesc = document.querySelector('#cat_description');
 
       if (allCats.length == 0) {
         allCats.push("Stray Cat");
         catDescri.push("The stray cat is the most precious of all the cats! You may not have a home but that's because the world is your home. You are one of a kind!");
-        console.log(catDescri[0])
-        console.log("thisis the dom node catdesc", catDesc.textContent)
-
         catDesc.innerText = catDescri[0];
-        console.log("thisis the dom node catdesc after update", catDesc.innerText)
       }
 
       let randomCat = allCats[Math.floor(Math.random() * allCats.length)]
@@ -67,52 +59,41 @@ function chooseCatOptions() {
       let catDescription = [];
 
       for (let i = 0; i < catObj.length; i++) {
-
         if (catObj[i].name == randomCat) {
           catDescription.push(catObj[i].description)
           catDesc.textContent = catDescription[0];
-
         }
       }
 
-
       const inputName = document.getElementById('name').value;
-      console.log(inputName);
-
-      console.log(catDescription);
       let humanName = document.getElementById('human_name');
-
       humanName.textContent = "Hey " + inputName + "! You are a " + randomCat;
     }
   }
   xhr.open("GET", url, true);
   xhr.send();
-
 }
 
 
-//First giphy 
+// Giphy API
 
 let getGiphy = function(name) {
-let xhr = new XMLHttpRequest();
-    // let breedName = allCats[0];
-    // let breed = 'british-blue';
-      let url = `https://api.giphy.com/v1/gifs/search?api_key=AKBayfz9FpPmrLSc5ScLLJx9BOzj2gaF&q=${name}+cat&limit=2`;
-      xhr.onreadystatechange = function() {
-          if (xhr.readyState == 4 && xhr.status == 200) {
-            let giphyObj = JSON.parse(xhr.responseText);
-            console.log(giphyObj);
-            let gifDrop = document.querySelector(".question__mark");
-            console.log(gifDrop);
-            let link = giphyObj.data[0].images.downsized_medium.url;
-            gifDrop.src = link;
-            console.log(link);
-          }
-      };
-      xhr.open("GET", url, true);
-      xhr.send();
-
+  let xhr = new XMLHttpRequest();
+  let url = `https://api.giphy.com/v1/gifs/search?api_key=AKBayfz9FpPmrLSc5ScLLJx9BOzj2gaF&q=${name}+cat&limit=2`;
+  xhr.onreadystatechange = function() {
+      if (xhr.readyState == 4 && xhr.status == 200) {
+        let giphyObj = JSON.parse(xhr.responseText);
+        console.log(giphyObj);
+        let gifDrop = document.querySelector(".question__mark");
+        console.log(gifDrop);
+        let link = giphyObj.data[0].images.downsized_medium.url;
+        gifDrop.src = link;
+        console.log(link);
+      }
   };
+  xhr.open("GET", url, true);
+  xhr.send();
+};
   
 //UI VARIABLES
 const inputName = document.getElementById('name').value;
