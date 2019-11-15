@@ -39,7 +39,7 @@
 
 ---
 
-![](https://i.imgur.com/hA0fPHb.jpg)
+![](https://i.imgur.com/e5dsmeM.jpg)
 
 ---
 
