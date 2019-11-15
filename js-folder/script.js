@@ -1,6 +1,5 @@
 function chooseCatOptions() {
   event.preventDefault();
-<<<<<<< HEAD
  
   let stranNum = Number(document.querySelector('[name="stranger-friendly"]:checked').value)
   
