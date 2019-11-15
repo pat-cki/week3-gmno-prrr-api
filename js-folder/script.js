@@ -2,13 +2,9 @@ function chooseCatOptions() {
 
   event.preventDefault();
 
-  const stranNum = Number(document.querySelector('[name="stranger-friendly"]:checked').value)
-  
-  const energyNum = Number(document.querySelector('[name="energy"]:checked').value)
-
-  const childrenNum = Number(document.querySelector('[name="children"]:checked').value)
-  
-  console.log ("this is them", stranNum, energyNum, childrenNum)
+  const stranNum = Number(document.querySelector('[name="stranger-friendly"]:checked').value);
+  const energyNum = Number(document.querySelector('[name="energy"]:checked').value);
+  const childrenNum = Number(document.querySelector('[name="children"]:checked').value);
   
   const xhr = new XMLHttpRequest();
   const url = "https://api.thecatapi.com/v1/breeds/";
