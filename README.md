@@ -49,7 +49,8 @@
 
 ---
 
-#### A clearly defined user journey, documented in your readme
+#### A clearly defined user journey
+
 * An app for people who are into cats and would like to learn what breed they match themselves. 
 * User can fill in the form with some basic personality questions and get matched with the breed with those characteristics.
 
