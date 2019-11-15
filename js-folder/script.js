@@ -1,20 +1,20 @@
 function chooseCatOptions() {
-  event.preventDefault();
-<<<<<<< HEAD
- 
-  let stranNum = Number(document.querySelector('[name="stranger-friendly"]:checked').value)
-  
-  let energyNum = Number(document.querySelector('[name="energy"]:checked').value)
 
-  let childrenNum = Number(document.querySelector('[name="children"]:checked').value)
+  event.preventDefault();
+
+  const stranNum = Number(document.querySelector('[name="stranger-friendly"]:checked').value)
+  
+  const energyNum = Number(document.querySelector('[name="energy"]:checked').value)
+
+  const childrenNum = Number(document.querySelector('[name="children"]:checked').value)
   
   console.log ("this is them", stranNum, energyNum, childrenNum)
   
-  let xhr = new XMLHttpRequest();
-  let url = "https://api.thecatapi.com/v1/breeds/";
+  const xhr = new XMLHttpRequest();
+  const url = "https://api.thecatapi.com/v1/breeds/";
   xhr.onreadystatechange = function () {
     if (xhr.readyState == 4 && xhr.status == 200) {
-      let catObj = JSON.parse(xhr.responseText);
+      const catObj = JSON.parse(xhr.responseText);
       console.log(catObj);
       let allCats = []
       console.log("this is", catObj[0])
@@ -49,7 +49,7 @@ function chooseCatOptions() {
         }
       }
 
-      const inputName = document.getElementById('name').value;
+      let inputName = document.getElementById('name').value;
       let humanName = document.getElementById('human_name');
       humanName.textContent = "Hey " + inputName + "! You are a " + randomCat;
     }
@@ -58,15 +58,14 @@ function chooseCatOptions() {
   xhr.send();
 }
 
-
 // Giphy API
 
 let getGiphy = function(name) {
-  let xhr = new XMLHttpRequest();
-  let url = `https://api.giphy.com/v1/gifs/search?api_key=AKBayfz9FpPmrLSc5ScLLJx9BOzj2gaF&q=${name}+cat&limit=2`;
+  const xhr = new XMLHttpRequest();
+  const url = `https://api.giphy.com/v1/gifs/search?api_key=AKBayfz9FpPmrLSc5ScLLJx9BOzj2gaF&q=${name}+cat&limit=2`;
   xhr.onreadystatechange = function() {
       if (xhr.readyState == 4 && xhr.status == 200) {
-        let giphyObj = JSON.parse(xhr.responseText);
+        const giphyObj = JSON.parse(xhr.responseText);
         console.log(giphyObj);
         let gifDrop = document.querySelector(".question__mark");
         console.log(gifDrop);
@@ -78,7 +77,3 @@ let getGiphy = function(name) {
   xhr.open("GET", url, true);
   xhr.send();
 };
-  
-//UI VARIABLES
-const inputName = document.getElementById('name').value;
-
