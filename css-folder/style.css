@@ -13,6 +13,7 @@ body {
     color: #fff;
     background-image: url("../img/cats.svg");
     min-height: 50em;
+    margin-bottom: 1.3em;
 }
 
 header {
@@ -28,15 +29,15 @@ h2,
 }
 
 h1 {
-    font-size: 6em;
-}
-
-h2 {
     font-size: 3em;
 }
 
+h2 {
+    font-size: 1.8em;
+}
+
 .header__paragraph {
-    font-size: 2em;
+    font-size: 0.8em;
 }
 
 .container {
@@ -115,6 +116,9 @@ input.button:active {
 }
 
 @media screen and (min-width: 600px) {
+    body {
+        margin-right: 1em;
+    }
     .container {
         flex-direction: row;
     }
