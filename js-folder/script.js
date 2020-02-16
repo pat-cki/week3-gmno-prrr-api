@@ -4,12 +4,13 @@ function personaliseName(name, randomCat) {
 }
 
 function chooseCatOptions() {
-
   event.preventDefault();
+  //form values
   const stranNum = Number(document.querySelector('[name="stranger-friendly"]:checked').value);
   const energyNum = Number(document.querySelector('[name="energy"]:checked').value);
   const childrenNum = Number(document.querySelector('[name="children"]:checked').value);
 
+  //XHR request
   const xhr = new XMLHttpRequest();
   const url = "https://api.thecatapi.com/v1/breeds/";
   xhr.onreadystatechange = function () {
@@ -52,7 +53,6 @@ function chooseCatOptions() {
   xhr.send();
 }
 // Giphy API
-
 let getGiphy = function (name) {
   const xhr = new XMLHttpRequest();
   const url = `https://api.giphy.com/v1/gifs/search?api_key=AKBayfz9FpPmrLSc5ScLLJx9BOzj2gaF&q=${name}+cat&limit=2`;
